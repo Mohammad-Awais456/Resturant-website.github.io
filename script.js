@@ -1,54 +1,103 @@
-let navul=document.querySelector('#navul');
-let leftul=document.querySelectorAll('.leftul');
-let toggle=document.querySelector('#togglebar');
-let toggleicon=document.querySelector('#toggleicon');
 
-function disableScrolling(){
-    var x=window.scrollX;
-    var y=window.scrollY;
-    window.onscroll=function(){window.scrollTo(x, y);};
-}
-
-function enableScrolling(){
-    window.onscroll=function(){};
-}
-
-
-    
-    leftul.forEach((item)=>{
-        item.addEventListener("click",()=>{
-            navul.style.left="-200%"
-
-            toggleicon.classList.toggle('fa-bars');
-            toggleicon.classList.toggle('fa-times');
-            enableScrolling();
-        });
-    });
+var browser = (function() {
+    var test = function(regexp) {return regexp.test(window.navigator.userAgent)}
+    switch (true) {
+        case test(/edg/i): return "Microsoft Edge";
+        case test(/trident/i): return "Microsoft Internet Explorer";
+        case test(/firefox|fxios/i): return "Mozilla Firefox";
+        case test(/opr\//i): return "Opera";
+        case test(/ucbrowser/i): return "UC Browser";
+        case test(/samsungbrowser/i): return "Samsung Browser";
+        case test(/chrome|chromium|crios/i): return "Google Chrome";
+        case test(/safari/i): return "Apple Safari";
+        default: return "Other";
+    }
+})();
+if(browser=="Microsoft Internet Explorer"){
 
 
+    alert("This website does not support Internet Explorer.Click below to open in Micorsoft Edge")
+   
+  var url=document.location.href;
+  var inex='<div class="internetex"> <div class="innerexp"> <div class="headingexp"> <h1>This browser is no longer supported</h1> </div> <div class="detailparadiv"> <p id="expdetailpara" class="exppara">Please, Switch to supported browsers i.e, chrome,firefox,Micorsoft Edge,opera,safari,vivaldi or any modern browser except Internet Explorer. <span>Internet Explorer does not support modern web pages, even bootstrap 5 & Twitter does not support it.</span> Now, Micorsoft are replacing it with modern Micorsoft Edge brower. Micorsoft Edge are pre-Installed in window 10. <span id="expopeninpara" class="exppara">If you want to open this website in Micorsoft Edge then click on below Button</span></p></div><div class="buttonexpdiv"> <button id="expbutton"> <a href="microsoft-edge:'+url+'"> Open Edge </a> </button></div> </div></div>';
+  var body=document.getElementById("mainbodybody");
+  body.innerHTML=inex;
 
-
-
-function bartoclose(){
-
-    toggleicon.classList.toggle('fa-bars');
-    toggleicon.classList.toggle('fa-times');
-    if(!(navul.style.left==="0%"))
-    {
-    disableScrolling();
-    navul.style.left="0%"
 }
 else{
-    navul.style.left="-200%"
+  alert("chrome");
+  var url=document.location.href;
+  var inex='<div class="internetex"> <div class="innerexp"> <div class="headingexp"> <h1>This browser is no longer supported</h1> </div> <div class="detailparadiv"> <p id="expdetailpara" class="exppara">Please, Switch to supported browsers i.e, chrome,firefox,Micorsoft Edge,opera,safari,vivaldi or any modern browser except Internet Explorer. <span>Internet Explorer does not support modern web pages, even bootstrap 5 & Twitter does not support it.</span> Now, Micorsoft are replacing it with modern Micorsoft Edge brower. Micorsoft Edge are pre-Installed in window 10. <span id="expopeninpara" class="exppara">If you want to open this website in Micorsoft Edge then click on below Button</span></p></div><div class="buttonexpdiv"> <button id="expbutton"> <a href="microsoft-edge:'+url+'"> Open Edge </a> </button></div> </div></div>';
+  var body=document.getElementById("mainbodybody");
+  body.innerHTML=inex;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"use strict";
+
+
+
+
+
+
+
+var navul = document.querySelector('#navul');
+var leftul = document.querySelectorAll('.leftul');
+var toggle = document.querySelector('#togglebar');
+var toggleicon = document.querySelector('#toggleicon');
+
+function disableScrolling() {
+  var x = window.scrollX;
+  var y = window.scrollY;
+
+  window.onscroll = function () {
+    window.scrollTo(x, y);
+  };
+}
+
+function enableScrolling() {
+  window.onscroll = function () {};
+}
+
+leftul.forEach(function (item) {
+  item.addEventListener("click", function () {
+    navul.style.left = "-200%";
+    toggleicon.classList.toggle('fa-bars');
+    toggleicon.classList.toggle('fa-times');
     enableScrolling();
+  });
+});
+
+function bartoclose() {
+  toggleicon.classList.toggle('fa-bars');
+  toggleicon.classList.toggle('fa-times');
+
+  if (!(navul.style.left === "0%")) {
+    disableScrolling();
+    navul.style.left = "0%";
+  } else {
+    navul.style.left = "-200%";
+    enableScrolling();
+  }
 }
 
-}
-toggle.addEventListener("click",bartoclose);
-
-
-
-
-
-
+toggle.addEventListener("click", bartoclose);
 

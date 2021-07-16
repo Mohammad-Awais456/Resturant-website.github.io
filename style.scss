@@ -11,6 +11,77 @@ font-family: 'Lobster', cursive;
 transition: 0.7s;
 }
 
+.internetex{
+    position: fixed;
+    z-index: 32423423423423432;
+    background-color: rgba(0, 0, 0, 0.933);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+.innerexp{
+    width: 500px;
+    height: 340px;
+    background-color: rgb(255, 255, 255);
+
+}
+.headingexp{
+    color: black;
+    font-size: 40px;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: flex-end;
+
+}
+.buttonexpdiv{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+}
+#expbutton{
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    background-color: skyblue;
+    color: white;
+    font-size: 25px;
+    padding: 5px 10px;
+    height: auto;
+    width: auto;
+}
+
+.detailparadiv{
+    color: rgb(67, 67, 67);
+    font-size: 16px;
+    width: 100%;
+    position: relative;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    text-align: center;
+
+}
+#expdetailpara span{
+    color: red;
+}
+#expopeninpara{
+    color: #15548a !important;
+    margin-top: 4px;
+}
+.exppara{
+    max-width: 400px !important;
+}
 /* scroll bar  */
 ::-webkit-scrollbar {
     width: 10px;
