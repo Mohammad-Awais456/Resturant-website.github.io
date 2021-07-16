@@ -19,17 +19,14 @@ if(browser=="Microsoft Internet Explorer"){
     alert("This website does not support Internet Explorer.Click below to open in Micorsoft Edge")
    
   var url=document.location.href;
-  var inex='<div class="internetex"> <div class="innerexp"> <div class="headingexp"> <h1>This browser is no longer supported</h1> </div> <div class="detailparadiv"> <p id="expdetailpara" class="exppara">Please, Switch to supported browsers i.e, chrome,firefox,Micorsoft Edge,opera,safari,vivaldi or any modern browser except Internet Explorer. <span>Internet Explorer does not support modern web pages, even bootstrap 5 & Twitter does not support it.</span> Now, Micorsoft are replacing it with modern Micorsoft Edge brower. Micorsoft Edge are pre-Installed in window 10. <span id="expopeninpara" class="exppara">If you want to open this website in Micorsoft Edge then click on below Button</span></p></div><div class="buttonexpdiv"> <button id="expbutton"> <a href="microsoft-edge:'+url+'"> Open Edge </a> </button></div> </div></div>';
+  var inex='<div class="internetex"> <div class="innerexp"> <div class="headingexp"> <h1>This browser is no longer supported</h1> </div> <div class="detailparadiv"> <p id="expdetailpara" class="exppara">Please, Switch to supported browsers i.e, chrome,firefox,Micorsoft Edge,opera,safari,vivaldi or any modern browser except Internet Explorer. <span>Internet Explorer does not support modern web pages, even bootstrap 5 & Twitter does not support it.</span> Now, Micorsoft are replacing it with modern Micorsoft Edge brower. Micorsoft Edge are pre-Installed in window 10. <span id="expopeninpara" class="exppara">If you want to open this website in Micorsoft Edge then click on below Button</span></p></div><div class="buttonexpdiv">  <a id="expbutton" href="microsoft-edge:'+url+'"> Open Edge </a></div> </div></div>';
   var body=document.getElementById("mainbodybody");
   body.innerHTML=inex;
+  document.write("The Internet Explorer browser is not supported by this site. We suggest you visit the site using supported browsers." + "<A HREF='microsoft-edge:"+url+"'>Click here to launch the site in the MS Edge browser</A>");
 
 }
 else{
-  alert("chrome");
-  var url=document.location.href;
-  var inex='<div class="internetex"> <div class="innerexp"> <div class="headingexp"> <h1>This browser is no longer supported</h1> </div> <div class="detailparadiv"> <p id="expdetailpara" class="exppara">Please, Switch to supported browsers i.e, chrome,firefox,Micorsoft Edge,opera,safari,vivaldi or any modern browser except Internet Explorer. <span>Internet Explorer does not support modern web pages, even bootstrap 5 & Twitter does not support it.</span> Now, Micorsoft are replacing it with modern Micorsoft Edge brower. Micorsoft Edge are pre-Installed in window 10. <span id="expopeninpara" class="exppara">If you want to open this website in Micorsoft Edge then click on below Button</span></p></div><div class="buttonexpdiv"> <button id="expbutton"> <a href="microsoft-edge:'+url+'"> Open Edge </a> </button></div> </div></div>';
-  var body=document.getElementById("mainbodybody");
-  body.innerHTML=inex;
+ console.log(browser);
 
 
 

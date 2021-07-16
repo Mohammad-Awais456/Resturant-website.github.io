@@ -79,6 +79,10 @@
   width: auto;
 }
 
+#expbutton:hover {
+  cursor: pointer;
+}
+
 .detailparadiv {
   color: #434343;
   font-size: 16px;
