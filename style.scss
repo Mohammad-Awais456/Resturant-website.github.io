@@ -297,6 +297,9 @@ height: 20vh;
     .headerheading{
 font-size: 6rem !important;
     }
+    .logo {
+        width: 13rem !important;
+    }
 }
 @media only screen and (min-width:470px) and (max-width:549px){
     .headerheading{
@@ -307,6 +310,9 @@ max-width: 330px;
     .hbtn{
         font-size: 2.3rem !important;
     } 
+    .logo {
+        width: 12rem !important;
+    }
 }
 @media only screen and (min-width:360px) and (max-width:469px){
     .headerheading{
@@ -315,6 +321,9 @@ max-width: 330px;
     }
     .hbtn{
         font-size: 2.2rem !important;
+    }
+    .logo {
+        width: 11rem !important;
     }
 }
 @media only screen and (min-width:300px) and (max-width:359px){
@@ -325,14 +334,23 @@ max-width: 250px;
     .hbtn{
         font-size: 2.1rem !important;
     }
+    .logo {
+        width: 10rem !important;
+    }
 }
 @media only screen and (min-width:200px) and (max-width:299px){
     .headerheading{
-font-size: 3rem !important;
-max-width: 250px;
+font-size: 2rem !important;
+
+    }
+    #headerheadingparent{
+        max-width: 120px !important;
     }
     .hbtn{
-        font-size: 1.7rem !important;
+        font-size: 1.3rem !important;
+    }
+    .logo {
+        width: 9rem !important;
     }
 }
 
